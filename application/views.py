@@ -30,6 +30,7 @@ def home_page(request):
 
     homeobjects = Home_clas.objects.all()
     socialmediaobjects = social_media_clas.objects.all()
+    resumefileobjects = resume_clas.objects.all()
     aboutusobjects = about_yourself_clas.objects.all()
     skillsobjects = skill_clas.objects.all()
     education_objects = education_clas.objects.all()
@@ -41,6 +42,7 @@ def home_page(request):
     return render(request, 'index.html', {
         'home': homeobjects,
         'socialmedias':socialmediaobjects,
+        'files':resumefileobjects,
         'aboutus': aboutusobjects,
         'skills': skillsobjects,
         'education': education_objects,

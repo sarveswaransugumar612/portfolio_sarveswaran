@@ -19,6 +19,13 @@ class social_media_clas(models.Model):
     def __str__(self):
         return self.social_media_type
 
+class resume_clas(models.Model):
+    resume_title = models.CharField(max_length = 100)
+    resume_file = models.FileField(upload_to='resumefile/')
+
+    def __str__(self):
+        return self.resume_title
+
 class about_yourself_clas(models.Model):
     about_yourself = models.CharField(max_length=500)
     profile_image = models.ImageField(upload_to='profile/')

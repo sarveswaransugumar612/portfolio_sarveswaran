@@ -61,8 +61,11 @@
 
   <section id="hero" class="d-flex flex-column justify-content-center" style="background-image: url({{h.back_ground_image.url}})">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
       <h1>{{h.name}}</h1>
       <p>I'm <span class="typed" data-typed-items="{{h.role}}"></span></p>
+
+
 
 
       <div class="social-links">
@@ -71,6 +74,12 @@
         {% endfor %}
       </div>
 
+      {% for file in files %}
+<div style="margin-top:20px">
+<a href="{{file.resume_file.url}}" download style="padding: 10px 35px;border-radius:20px;background: #0563bb;color: white;border: 0;">
+                  Download Resume</a>
+  </div>
+      {% endfor %}
 
     </div>
   </section><!-- End Hero -->
@@ -111,7 +120,7 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>{{about.city}}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{about.age}}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>{{about.website}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <a href="{{about.website}}">{{about.website}}</a></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Years of Experience:</strong> <span>{{about.years_of_experience}}</span></li>
                 </ul>
               </div>

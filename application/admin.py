@@ -4,6 +4,7 @@ from .models import *
 
 admin.site.register(Home_clas)
 admin.site.register(social_media_clas)
+admin.site.register(resume_clas)
 admin.site.register(about_yourself_clas)
 admin.site.register(skill_clas)
 admin.site.register(education_clas)
